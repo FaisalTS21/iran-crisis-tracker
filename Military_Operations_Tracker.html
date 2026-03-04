@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>العمليات العسكرية — أزمة إيران ٢٠٢٦</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0408;--card:#1a0c14;--card2:#241320;--card3:#2e1a2a;--border:#3d1f30;--border2:#4d2f40;--txt:#f5f0f2;--txt2:#b8a0ac;--txt3:#7a6070;--red:#ff3355;--red2:#cc1133;--orange:#ff6633;--gold:#ffaa22;--purple:#aa44ff;--blue:#3388ff;--cyan:#22ccdd;--green:#22dd88;--rose:#ff6688;--dark:#110610}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+.mono{font-family:'Courier New',monospace}
+
+/* Header */
+.hdr{background:linear-gradient(135deg,#1a0c14 0%,#2a1020 50%,#1a0c14 100%);border-bottom:2px solid var(--red2);padding:16px 20px}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-i{width:44px;height:44px;background:linear-gradient(135deg,var(--red),var(--orange));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,51,85,.3)}
+.logo h1{font-size:16px;font-weight:700;color:#fff}
+.logo p{font-size:10px;color:var(--txt3)}
+.live{display:flex;align-items:center;gap:6px;background:rgba(255,51,85,.1);border:1px solid rgba(255,51,85,.3);border-radius:20px;padding:4px 14px;font-size:10px;color:var(--red)}
+.dot{width:6px;height:6px;background:var(--red);border-radius:50%;animation:p 1.5s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* Alert bar */
+.alert{display:flex;align-items:center;gap:8px;background:rgba(255,51,85,.08);border:1px solid rgba(255,51,85,.25);border-radius:8px;padding:8px 14px;font-size:11px;color:var(--rose);overflow-x:auto;white-space:nowrap}
+.alert-dot{width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;animation:p 1s infinite}
+
+.nav{display:flex;gap:3px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:3px;margin:14px 20px 0}
+.nb{flex:1;padding:10px 8px;border-radius:7px;border:none;background:transparent;color:var(--txt2);font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;text-align:center;transition:all .2s}
+.nb.a{background:linear-gradient(135deg,var(--red),var(--orange));color:#fff}
+
+main{padding:14px 20px 40px}
+section{display:none}section.a{display:block}
+
+.sg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(min-width:600px){.sg{grid-template-columns:repeat(3,1fr)}}
+.st{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;position:relative;overflow:hidden}
+.st::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.sr::before{background:var(--red)}.so::before{background:var(--orange)}.sg2::before{background:var(--gold)}.sp::before{background:var(--purple)}.sb::before{background:var(--blue)}.sc::before{background:var(--cyan)}.sgr::before{background:var(--green)}.sro::before{background:var(--rose)}
+.si{font-size:18px;margin-bottom:2px}.sv{font-family:'Courier New',monospace;font-size:24px;font-weight:700;margin:3px 0}.sl{font-size:10px;color:var(--txt2)}.ss{font-size:9px;color:var(--txt3)}
+
+.cd{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:12px}
+.ch{padding:14px 16px 10px;border-bottom:1px solid rgba(61,31,48,.5);display:flex;align-items:center;justify-content:space-between}
+.ch h3{font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}.ch span{font-size:10px;color:var(--txt3)}
+.cb{padding:14px 16px}
+
+.ts{max-height:400px;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{background:var(--card2);color:var(--txt3);padding:9px 12px;text-align:right;font-weight:600;font-size:10px;position:sticky;top:0;z-index:2}
+td{padding:8px 12px;border-bottom:1px solid rgba(61,31,48,.3)}
+.b{padding:2px 8px;border-radius:5px;font-size:9px;font-weight:600}
+.br{background:rgba(255,51,85,.15);color:#ff8899}.bg{background:rgba(34,221,136,.12);color:#66eeb8}
+.by{background:rgba(255,170,34,.12);color:#ffc966}.bb{background:rgba(51,136,255,.12);color:#77bbff}
+.bp{background:rgba(170,68,255,.12);color:#cc99ff}.bo{background:rgba(255,102,51,.12);color:#ff9977}
+
+/* Timeline */
+.tl{position:relative;padding-right:28px}.tl::before{content:'';position:absolute;right:10px;top:0;bottom:0;width:2px;background:linear-gradient(var(--blue),var(--red),var(--orange),var(--red))}
+.ti{position:relative;padding:12px 16px;margin-bottom:8px;background:var(--card2);border:1px solid var(--border);border-radius:10px;transition:border-color .15s}
+.ti:hover{border-color:var(--border2)}
+.ti::before{content:'';position:absolute;right:-23px;top:16px;width:10px;height:10px;border-radius:50%;border:2px solid var(--bg)}
+.ti.cr::before{background:var(--red);box-shadow:0 0 8px rgba(255,51,85,.5)}.ti.hi::before{background:var(--orange)}.ti.me::before{background:var(--gold)}
+.td{font-family:'Courier New',monospace;font-size:9px;color:var(--cyan);margin-bottom:3px}
+.tt{font-size:13px;font-weight:600;margin-bottom:3px}.te{font-size:10px;color:var(--txt2);line-height:1.6}
+.src{font-size:9px;color:var(--txt3);margin-top:4px}
+
+/* Casualty grid */
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+.cc{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;transition:border-color .15s}
+.cc:hover{border-color:var(--border2)}
+.cf{font-size:24px;margin-bottom:2px}.cn{font-size:11px;color:var(--txt2);margin:2px 0}
+.ck{font-family:'Courier New',monospace;font-size:22px;font-weight:700;color:var(--red)}.cx{font-size:9px;color:var(--txt3);margin-top:3px}
+
+
+/* Map */
+.map-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.map-wrap svg{display:block;width:100%;height:auto}
+.strike{cursor:pointer}
+.strike circle.pulse{animation:pulse-ring 2s infinite}
+@keyframes pulse-ring{0%{r:4;opacity:.8}100%{r:14;opacity:0}}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--txt2)}
+.leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.map-info{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;margin-top:10px;font-size:11px;color:var(--txt2);display:none}
+.map-info.v{display:block}
+.map-info h4{font-size:12px;color:var(--txt);margin-bottom:4px}
+
+/* AI */
+.ai{background:linear-gradient(135deg,rgba(255,51,85,.06),rgba(170,68,255,.06));border:1px solid rgba(255,51,85,.2);border-radius:14px;padding:16px;margin-bottom:12px}
+.ai h3{font-size:14px;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.abg{display:flex;flex-wrap:wrap;gap:8px}
+.ab{padding:9px 16px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--red),var(--purple));color:#fff;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;box-shadow:0 2px 10px rgba(255,51,85,.2)}
+.ab:disabled{opacity:.4}
+.ar{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:12px;font-size:12px;line-height:1.9;color:var(--txt2);white-space:pre-wrap;display:none}.ar.v{display:block}
+.al{display:none;align-items:center;gap:8px;color:var(--red);font-size:12px;margin-top:12px}.al.v{display:flex}
+.sp{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--red);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.ft{border-top:1px solid var(--border);padding:20px;text-align:center}.ft p{font-size:10px;color:var(--txt3);line-height:1.8}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+<div class="hdr-top">
+<div class="logo"><div class="logo-i">⚔️</div><div><h1>العمليات العسكرية — أزمة إيران</h1><p>Iran Crisis 2026 — Military Operations Tracker</p></div></div>
+<div class="live"><div class="dot"></div>LIVE</div>
+</div>
+<div class="alert"><div class="alert-dot"></div>🔴 Operation Epic Fury — يوم ٣ — ١٠٠٠+ هدف ضُرب — ٢٤ محافظة — ٦٢٠+ قتيل — ٩ دول تحت الهجوم</div>
+</header>
+
+<div class="nav">
+<button class="nb a" onclick="go(0)">📋 الجدول الزمني</button>
+<button class="nb" onclick="go(1)">🗺️ الخريطة</button>
+<button class="nb" onclick="go(2)">📍 الضربات</button>
+<button class="nb" onclick="go(3)">💀 الخسائر</button>
+<button class="nb" onclick="go(4)">🤖 أخبار AI</button>
+</div>
+<main>
+
+<!-- TIMELINE -->
+<section class="a" id="s0">
+<div class="sg">
+<div class="st sr"><div class="si">🎯</div><div class="sv" style="color:var(--red)">1000+</div><div class="sl">أهداف ضُربت</div><div class="ss">CENTCOM</div></div>
+<div class="st so"><div class="si">✈️</div><div class="sv" style="color:var(--orange)">1200+</div><div class="sl">ذخائر إسرائيلية</div><div class="ss">٢٤ محافظة في يوم</div></div>
+<div class="st sp"><div class="si">🚀</div><div class="sv" style="color:var(--purple)">706+</div><div class="sl">صواريخ + مسيّرات إيرانية</div><div class="ss">165 صاروخ + 541 مسيّرة</div></div>
+<div class="st sb"><div class="si">🌍</div><div class="sv" style="color:var(--blue)">9</div><div class="sl">دول استُهدفت</div><div class="ss">بالرد الإيراني</div></div>
+<div class="st sg2"><div class="si">🏛️</div><div class="sv" style="color:var(--gold)">40+</div><div class="sl">مسؤول إيراني قُتل</div><div class="ss">بما فيهم خامنئي</div></div>
+<div class="st sgr"><div class="si">⏱️</div><div class="sv" style="color:var(--green)">4 أسابيع</div><div class="sl">المدة المتوقعة</div><div class="ss">تقدير ترامب</div></div>
+</div>
+<div class="cd"><div class="ch"><h3>📋 الجدول الزمني الكامل</h3><span>ديسمبر ٢٠٢٥ — مارس ٢٠٢٦</span></div><div class="cb"><div class="tl" id="t1"></div></div></div>
+</section>
+
+<!-- STRIKES -->
+<section id="s1">
+<div class="cd"><div class="ch"><h3>🗺️ خريطة الضربات والعمليات</h3><span>اضغط على أي نقطة لمعرفة التفاصيل</span></div><div class="cb">
+<div class="map-wrap">
+<svg viewBox="0 0 700 440" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="rg"><stop offset="0%" stop-color="#ff3355" stop-opacity=".15"/><stop offset="100%" stop-color="#ff3355" stop-opacity="0"/></radialGradient>
+<radialGradient id="og"><stop offset="0%" stop-color="#ff6633" stop-opacity=".15"/><stop offset="100%" stop-color="#ff6633" stop-opacity="0"/></radialGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+
+<!-- Sea -->
+<rect width="700" height="440" fill="#080412"/>
+
+<!-- Country shapes (simplified) -->
+<!-- Turkey -->
+<polygon points="30,18 70,8 140,5 200,10 240,28 260,18 280,35 260,55 220,65 160,60 120,70 80,58 50,45 30,40" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="140" y="38" fill="#4d2f40" font-size="11" text-anchor="middle">تركيا</text>
+
+<!-- Cyprus -->
+<ellipse cx="68" cy="88" rx="18" ry="7" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="68" y="82" fill="#4d2f40" font-size="8" text-anchor="middle">قبرص</text>
+
+<!-- Syria -->
+<polygon points="60,65 110,60 140,70 155,90 140,120 100,130 70,115 55,90" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="100" y="98" fill="#4d2f40" font-size="9" text-anchor="middle">سوريا</text>
+
+<!-- Lebanon -->
+<polygon points="60,100 72,95 78,110 72,130 58,125" fill="#1e1018" stroke="#3d1f30" stroke-width="1"/>
+<text x="52" y="118" fill="#4d2f40" font-size="7" text-anchor="end">لبنان</text>
+
+<!-- Israel/Palestine -->
+<polygon points="58,128 72,125 75,145 72,175 60,178 55,155" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="48" y="152" fill="#4d2f40" font-size="7" text-anchor="end">إسرائيل</text>
+
+<!-- Jordan -->
+<polygon points="75,120 100,130 130,150 120,195 85,210 72,178 75,145" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="95" y="170" fill="#4d2f40" font-size="9" text-anchor="middle">الأردن</text>
+
+<!-- Iraq -->
+<polygon points="140,70 220,65 260,55 280,65 310,90 320,130 310,170 280,200 250,220 200,235 160,215 140,180 140,120 155,90" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="220" y="150" fill="#4d2f40" font-size="11" text-anchor="middle">العراق</text>
+
+<!-- Iran (large) -->
+<polygon points="280,35 320,25 380,20 440,30 500,25 550,40 590,60 620,100 630,150 620,200 600,240 570,270 540,290 510,300 480,310 440,310 410,290 380,260 350,240 310,225 310,170 320,130 310,90 280,65" fill="#1a0c14" stroke="#5d2040" stroke-width="1.5"/>
+<text x="440" y="155" fill="#7a3050" font-size="16" font-weight="bold" text-anchor="middle">إيران</text>
+
+<!-- Kuwait -->
+<polygon points="280,210 305,200 315,215 310,235 290,240 275,225" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="295" y="223" fill="#4d2f40" font-size="7" text-anchor="middle">الكويت</text>
+
+<!-- Saudi Arabia -->
+<polygon points="85,215 120,200 160,215 200,240 250,225 275,230 290,245 310,240 330,260 360,280 380,310 370,350 340,380 280,400 220,410 160,395 100,360 80,320 75,280 80,240" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="210" y="330" fill="#4d2f40" font-size="14" text-anchor="middle">السعودية</text>
+
+<!-- Bahrain -->
+<circle cx="340" cy="280" r="5" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="340" y="273" fill="#4d2f40" font-size="6" text-anchor="middle">البحرين</text>
+
+<!-- Qatar -->
+<polygon points="360,285 370,280 375,300 368,310 358,305" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="375" y="310" fill="#4d2f40" font-size="7">قطر</text>
+
+<!-- UAE -->
+<polygon points="390,290 440,275 480,285 490,310 460,325 420,320 395,305" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="440" y="310" fill="#4d2f40" font-size="9" text-anchor="middle">الإمارات</text>
+
+<!-- Oman -->
+<polygon points="480,285 520,260 560,270 580,300 570,340 540,370 500,380 460,330 490,310" fill="#18101a" stroke="#3d1f30" stroke-width="1"/>
+<text x="530" y="325" fill="#4d2f40" font-size="9" text-anchor="middle">عمان</text>
+
+<!-- Water labels -->
+<text x="350" y="350" fill="#15203a" font-size="10" text-anchor="middle" font-style="italic">الخليج العربي</text>
+<text x="600" y="250" fill="#15203a" font-size="9" text-anchor="middle" font-style="italic">بحر عمان</text>
+<text x="40" y="200" fill="#15203a" font-size="9" font-style="italic">المتوسط</text>
+
+<!-- Strait of Hormuz label -->
+<text x="500" y="295" fill="#ff6633" font-size="7" text-anchor="middle" opacity=".7">مضيق هرمز</text>
+<line x1="485" y1="288" x2="515" y2="285" stroke="#ff6633" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+
+<!-- ====== ATTACK ARROWS ====== -->
+<!-- US → Iran -->
+<line x1="100" y1="400" x2="420" y2="140" stroke="#3388ff" stroke-width="1" stroke-dasharray="8,4" opacity=".3"/>
+<text x="240" y="290" fill="#3388ff" font-size="8" opacity=".5" transform="rotate(-35,240,290)">US + Israel →</text>
+
+<!-- Iran → Targets (spread) -->
+<line x1="400" y1="260" x2="295" y2="225" stroke="#ff6633" stroke-width="0.8" stroke-dasharray="4,3" opacity=".25"/>
+<line x1="400" y1="260" x2="340" y2="280" stroke="#ff6633" stroke-width="0.8" stroke-dasharray="4,3" opacity=".25"/>
+<line x1="400" y1="260" x2="365" y2="295" stroke="#ff6633" stroke-width="0.8" stroke-dasharray="4,3" opacity=".25"/>
+<line x1="400" y1="260" x2="450" y2="300" stroke="#ff6633" stroke-width="0.8" stroke-dasharray="4,3" opacity=".25"/>
+<line x1="400" y1="260" x2="65" y2="148" stroke="#ff6633" stroke-width="0.8" stroke-dasharray="4,3" opacity=".25"/>
+<line x1="430" y1="180" x2="310" y2="280" stroke="#ff6633" stroke-width="0.8" stroke-dasharray="4,3" opacity=".25"/>
+
+<!-- ====== US/ISRAEL STRIKES ON IRAN (RED) ====== -->
+<!-- Tehran -->
+<g class="strike" onclick="showInfo(0)">
+<circle cx="420" cy="108" r="30" fill="url(#rg)"/>
+<circle cx="420" cy="108" r="4" fill="#ff3355" class="pulse" opacity=".4"/>
+<circle cx="420" cy="108" r="5" fill="#ff3355" stroke="#fff" stroke-width="1" filter="url(#glow)"/>
+<text x="420" y="99" fill="#ff8899" font-size="8" text-anchor="middle" font-weight="bold">طهران ⬤⬤⬤</text>
+</g>
+
+<!-- Isfahan -->
+<g class="strike" onclick="showInfo(1)">
+<circle cx="410" cy="165" r="20" fill="url(#rg)"/>
+<circle cx="410" cy="165" r="4" fill="#ff3355" class="pulse" opacity=".4"/>
+<circle cx="410" cy="165" r="4.5" fill="#ff3355" stroke="#fff" stroke-width="1" filter="url(#glow)"/>
+<text x="410" y="157" fill="#ff8899" font-size="7" text-anchor="middle">أصفهان ☢️</text>
+</g>
+
+<!-- Qom -->
+<g class="strike" onclick="showInfo(2)">
+<circle cx="395" cy="130" r="3.5" fill="#ff3355" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="380" y="128" fill="#ff8899" font-size="7" text-anchor="end">قم</text>
+</g>
+
+<!-- Tabriz -->
+<g class="strike" onclick="showInfo(3)">
+<circle cx="330" cy="55" r="3.5" fill="#ff3355" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="330" y="47" fill="#ff8899" font-size="7" text-anchor="middle">تبريز</text>
+</g>
+
+<!-- Kermanshah -->
+<g class="strike" onclick="showInfo(4)">
+<circle cx="320" cy="118" r="3.5" fill="#ff3355" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="308" y="115" fill="#ff8899" font-size="7" text-anchor="end">كرمنشاه</text>
+</g>
+
+<!-- Bushehr -->
+<g class="strike" onclick="showInfo(5)">
+<circle cx="380" cy="225" r="4" fill="#ff3355" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<circle cx="380" cy="225" r="4" fill="#ff3355" class="pulse" opacity=".3"/>
+<text x="380" y="217" fill="#ff8899" font-size="7" text-anchor="middle">بوشهر</text>
+</g>
+
+<!-- Shiraz -->
+<g class="strike" onclick="showInfo(6)">
+<circle cx="430" cy="215" r="3.5" fill="#ff3355" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="430" y="207" fill="#ff8899" font-size="7" text-anchor="middle">شيراز</text>
+</g>
+
+<!-- Minab (school - special marker) -->
+<g class="strike" onclick="showInfo(7)">
+<circle cx="530" cy="275" r="25" fill="url(#rg)"/>
+<circle cx="530" cy="275" r="5" fill="#ff3355" class="pulse" opacity=".5"/>
+<circle cx="530" cy="275" r="6" fill="#ffaa22" stroke="#ff3355" stroke-width="2" filter="url(#glow)"/>
+<text x="530" y="265" fill="#ffaa22" font-size="8" text-anchor="middle" font-weight="bold">🏫 ميناب</text>
+</g>
+
+<!-- ====== IRANIAN RETALIATION (ORANGE) ====== -->
+<!-- Kuwait base -->
+<g class="strike" onclick="showInfo(8)">
+<circle cx="295" cy="225" r="18" fill="url(#og)"/>
+<circle cx="295" cy="225" r="4" fill="#ff6633" class="pulse" opacity=".4"/>
+<circle cx="295" cy="225" r="4.5" fill="#ff6633" stroke="#fff" stroke-width="1" filter="url(#glow)"/>
+<text x="280" y="240" fill="#ff9977" font-size="7" text-anchor="middle">🇺🇸 قاعدة الكويت</text>
+</g>
+
+<!-- Bahrain -->
+<g class="strike" onclick="showInfo(9)">
+<circle cx="340" cy="280" r="3.5" fill="#ff6633" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+</g>
+
+<!-- Qatar -->
+<g class="strike" onclick="showInfo(10)">
+<circle cx="365" cy="295" r="4" fill="#ff6633" stroke="#fff" stroke-width="1" filter="url(#glow)"/>
+<text x="380" y="298" fill="#ff9977" font-size="7">العديد 🇺🇸</text>
+</g>
+
+<!-- Dubai -->
+<g class="strike" onclick="showInfo(11)">
+<circle cx="455" cy="300" r="18" fill="url(#og)"/>
+<circle cx="455" cy="300" r="4" fill="#ff6633" class="pulse" opacity=".4"/>
+<circle cx="455" cy="300" r="4.5" fill="#ff6633" stroke="#fff" stroke-width="1" filter="url(#glow)"/>
+<text x="455" y="292" fill="#ff9977" font-size="7" text-anchor="middle">✈️ دبي</text>
+</g>
+
+<!-- Abu Dhabi -->
+<g class="strike" onclick="showInfo(12)">
+<circle cx="440" cy="318" r="3.5" fill="#ff6633" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="425" y="330" fill="#ff9977" font-size="6" text-anchor="middle">أبوظبي</text>
+</g>
+
+<!-- Bet Shemesh / Israel -->
+<g class="strike" onclick="showInfo(13)">
+<circle cx="65" cy="148" r="18" fill="url(#og)"/>
+<circle cx="65" cy="148" r="4" fill="#ff6633" class="pulse" opacity=".4"/>
+<circle cx="65" cy="148" r="4.5" fill="#ff6633" stroke="#fff" stroke-width="1" filter="url(#glow)"/>
+<text x="65" y="140" fill="#ff9977" font-size="7" text-anchor="middle">بيت شيمش</text>
+</g>
+
+<!-- Ras Tanura Saudi -->
+<g class="strike" onclick="showInfo(14)">
+<circle cx="320" cy="260" r="3.5" fill="#ff6633" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="305" y="258" fill="#ff9977" font-size="6" text-anchor="end">رأس تنورة 🛢️</text>
+</g>
+
+<!-- Cyprus -->
+<g class="strike" onclick="showInfo(15)">
+<circle cx="68" cy="88" r="3.5" fill="#ff6633" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="68" y="100" fill="#ff9977" font-size="6" text-anchor="middle">قاعدة بريطانية</text>
+</g>
+
+<!-- Lebanon / Hezbollah -->
+<g class="strike" onclick="showInfo(16)">
+<circle cx="65" cy="115" r="3.5" fill="#aa44ff" stroke="#fff" stroke-width="0.8" filter="url(#glow)"/>
+<text x="48" y="108" fill="#cc99ff" font-size="6" text-anchor="end">حزب الله</text>
+</g>
+
+<!-- Baghdad -->
+<g class="strike" onclick="showInfo(17)">
+<circle cx="210" cy="135" r="3" fill="#ff6633" stroke="#fff" stroke-width="0.7" filter="url(#glow)"/>
+<text x="210" y="128" fill="#ff9977" font-size="6" text-anchor="middle">بغداد</text>
+</g>
+
+<!-- Legend Box -->
+<rect x="10" y="390" width="280" height="42" rx="6" fill="rgba(10,4,8,.85)" stroke="#3d1f30"/>
+<circle cx="25" cy="405" r="4" fill="#ff3355"/><text x="34" y="408" fill="#b8a0ac" font-size="8">ضربات أمريكية-إسرائيلية على إيران</text>
+<circle cx="25" cy="422" r="4" fill="#ff6633"/><text x="34" y="425" fill="#b8a0ac" font-size="8">رد إيراني على ٩ دول</text>
+<circle cx="170" cy="422" r="4" fill="#aa44ff"/><text x="179" y="425" fill="#b8a0ac" font-size="8">حزب الله</text>
+<circle cx="170" cy="405" r="4" fill="#ffaa22" stroke="#ff3355" stroke-width="1.5"/><text x="179" y="408" fill="#b8a0ac" font-size="8">مدنيون / مدرسة</text>
+
+</svg>
+</div>
+
+<!-- Info panel -->
+<div class="map-info" id="mapInfo"></div>
+
+<div style="margin-top:12px">
+<div class="sg">
+<div class="st sr"><div class="si">🔴</div><div class="sv" style="color:var(--red);font-size:18px">16 موقع</div><div class="sl">ضُربت في إيران</div></div>
+<div class="st so"><div class="si">🟠</div><div class="sv" style="color:var(--orange);font-size:18px">9 دول</div><div class="sl">رد إيراني</div></div>
+<div class="st sp"><div class="si">🟣</div><div class="sv" style="color:var(--purple);font-size:18px">لبنان</div><div class="sl">حزب الله ↔ إسرائيل</div></div>
+</div>
+</div>
+</div></div>
+</section>
+
+<section id="s2">
+<div class="sg">
+<div class="st sr"><div class="si">🇮🇷</div><div class="sv" style="color:var(--red)">16</div><div class="sl">مواقع في إيران</div></div>
+<div class="st so"><div class="si">🌍</div><div class="sv" style="color:var(--orange)">8</div><div class="sl">مواقع رد إيراني</div></div>
+</div>
+<div class="cd"><div class="ch"><h3>🗺️ مواقع الضربات</h3></div><div class="cb ts" id="sT"></div></div>
+</section>
+
+<!-- CASUALTIES -->
+<section id="s3">
+<div class="sg">
+<div class="st sr"><div class="si">💀</div><div class="sv" style="color:var(--red)">620+</div><div class="sl">إجمالي القتلى</div><div class="ss">جميع الأطراف</div></div>
+<div class="st so"><div class="si">🏥</div><div class="sv" style="color:var(--orange)">350+</div><div class="sl">إجمالي الجرحى</div><div class="ss">أرقام أولية</div></div>
+<div class="st sro"><div class="si">🏫</div><div class="sv" style="color:var(--rose)">180</div><div class="sl">أطفال مدرسة ميناب</div><div class="ss">مدرسة بنات ابتدائية</div></div>
+</div>
+<div class="cg" id="cG"></div>
+<div class="cd"><div class="ch"><h3>📋 تفاصيل الخسائر</h3></div><div class="cb ts" id="cT"></div></div>
+</section>
+
+<!-- AI -->
+<section id="s4">
+<div class="ai">
+<h3>🤖 أخبار عسكرية — AI</h3>
+<p style="font-size:11px;color:var(--txt2);margin-bottom:12px">Claude يبحث في الإنترنت عن آخر التطورات العسكرية</p>
+<div class="abg">
+<button class="ab" onclick="aiQ('مالك الروقي alrougui إيران حرب')">🎙️ مالك الروقي</button>
+<button class="ab" onclick="aiQ('Iran military strikes Operation Epic Fury update')">⚔️ آخر العمليات</button>
+<button class="ab" onclick="aiQ('Iran retaliation missiles drones today')">🚀 الرد الإيراني</button>
+<button class="ab" onclick="aiQ('Iran war casualties killed today')">💀 الخسائر</button>
+<button class="ab" onclick="aiQ('Hezbollah Israel Lebanon strikes')">🇱🇧 حزب الله</button>
+</div>
+<div class="al" id="aiL"><div class="sp"></div>جاري البحث...</div>
+<div class="ar" id="aiR"></div>
+</div>
+</section>
+</main>
+<footer class="ft">
+<p>⚠️ مشروع تحليل بيانات تعليمي — الأرقام أولية وقابلة للتغيير</p>
+<p style="margin-top:6px">صنع بواسطة <span style="color:var(--red);font-weight:700">فيصل فهد العليان</span> — مارس ٢٠٢٦</p>
+</footer>
+
+<script>
+function go(i){document.querySelectorAll('section').forEach(function(s,j){s.className=j===i?'a':''});document.querySelectorAll('.nb').forEach(function(b,j){b.className=j===i?'nb a':'nb'})}
+
+var tld=[{d:'Dec 20, 2025',e:'احتجاجات ضخمة — ١٠٠+ مدينة',s:'hi',dt:'أكبر احتجاجات منذ ١٩٧٩ — أزمة اقتصادية وانهيار الريال',sr:'Wikipedia/NPR'},{d:'Jan 8',e:'مجازر في صفوف المتظاهرين',s:'cr',dt:'قوات الأمن تطلق النار على المتظاهرين',sr:'Wikipedia/Al Jazeera'},{d:'Jan 13',e:'إيران تحذّر: مستعدون للحرب',s:'hi',dt:'مسؤولون إيرانيون يحذرون',sr:'Wikipedia'},{d:'Jan 13',e:'ترامب يدعو الإيرانيين للاستمرار',s:'hi',dt:'يقول المساعدة في الطريق',sr:'NPR'},{d:'Jan 23',e:'أسطول أمريكي يتجه للشرق الأوسط',s:'hi',dt:'USS Abraham Lincoln + مدمرات صاروخية',sr:'Wikipedia'},{d:'Feb 3',e:'زوارق IRGC تحاول احتجاز ناقلة',s:'hi',dt:'٦ زوارق في مضيق هرمز',sr:'Wikipedia'},{d:'Feb 14',e:'ترامب: ١٠-١٥ يوم للمفاوضات',s:'hi',dt:'مهلة نهائية علنية',sr:'CBS'},{d:'Feb 19',e:'أمريكا قد تضرب خلال أيام',s:'cr',dt:'البيت الأبيض يحذّر طهران',sr:'CBS'},{d:'Feb 28, 02:30',e:'ترامب يصدر بيان فيديو ٨ دقائق',s:'cr',dt:'يعلن هدف تغيير النظام فعلياً',sr:'NBC'},{d:'Feb 28, 03:00',e:'🔴 عملية Epic Fury تبدأ',s:'cr',dt:'B-2 بقنابل ٢٠٠٠ رطل + ضربات إسرائيلية منسّقة',sr:'CENTCOM/NPR'},{d:'Feb 28',e:'مقتل خامنئي',s:'cr',dt:'المرشد الأعلى عمر ٨٦ — إعلام إيراني يؤكد — ٤٠ يوم حداد',sr:'NPR/Wikipedia'},{d:'Feb 28',e:'مقتل ٤٠+ مسؤول إيراني',s:'cr',dt:'بما فيهم موسوي وأحمدي نجاد وبصيري',sr:'CBS News'},{d:'Feb 28',e:'إيران ترد — صواريخ على ٩ دول',s:'cr',dt:'إسرائيل الإمارات قطر الكويت البحرين الأردن السعودية العراق عمان',sr:'Al Jazeera'},{d:'Feb 28',e:'مطار دبي يُضرب — ٤ جرحى',s:'hi',dt:'صواريخ باليستية إيرانية',sr:'CNN/Fortune'},{d:'Feb 28',e:'مطار أبوظبي — ١ قتيل',s:'hi',dt:'مسيّرة إيرانية',sr:'CNBC/AP'},{d:'Feb 28',e:'إغلاق أجواء ٨+ دول',s:'hi',dt:'إيران إسرائيل العراق الأردن قطر البحرين الكويت الإمارات',sr:'Al Jazeera'},{d:'Mar 1',e:'مقتل ٣ جنود أمريكيين — الكويت',s:'cr',dt:'أول خسائر أمريكية في Epic Fury — وحدة إسناد',sr:'CENTCOM/NPR'},{d:'Mar 1',e:'ضرب ١٠٠٠+ هدف في ٢٤ محافظة',s:'cr',dt:'CENTCOM يؤكد + IAF تضرب ٢٤ من ٣١ محافظة',sr:'Washington Post/Al Jazeera'},{d:'Mar 1',e:'مدرسة بنات ميناب — ١٦٥-١٨٠ طفلة',s:'cr',dt:'مدرسة شجرة طيبة الابتدائية — إيران تتهم إسرائيل',sr:'NBC/Al Jazeera'},{d:'Mar 1',e:'الهلال الأحمر: ٥٥٥ قتيل إيراني',s:'cr',dt:'عبر ١٣١ مقاطعة — أرقام أولية',sr:'Al Jazeera'},{d:'Mar 1',e:'بيت شيمش — ٦ قتلى بصاروخ إيراني',s:'cr',dt:'صاروخ باليستي على مباني سكنية — ١٩ ميل من القدس',sr:'CBS'},{d:'Mar 1',e:'الإمارات: ١٦٥ صاروخ + ٥٤١ مسيّرة إيرانية',s:'cr',dt:'٢١ مسيّرة أصابت أهداف مدنية — ٣ قتلى في الإمارات',sr:'TIME/UAE MOD'},{d:'Mar 2',e:'مقتل الجندي الأمريكي الرابع',s:'cr',dt:'CENTCOM يؤكد — عمليات قتالية مستمرة',sr:'CBS/Washington Post'},{d:'Mar 2',e:'حزب الله-إسرائيل: تبادل ضربات',s:'cr',dt:'الحرب تتوسع — حزب الله ينتقم لخامنئي',sr:'CBS/NBC'},{d:'Mar 2',e:'لبنان: ٣١ قتيل ١٤٩ جريح',s:'cr',dt:'ثلثا القتلى جنوب لبنان',sr:'CBS'},{d:'Mar 2',e:'مسيّرة إيرانية تضرب قاعدة بريطانية — قبرص',s:'hi',dt:'المدرج أُصيب',sr:'Al Jazeera'}];
+function rTL(id,d){var h='';d.forEach(function(t){h+='<div class="ti '+t.s+'"><div class="td">'+t.d+'</div><div class="tt">'+t.e+'</div><div class="te">'+t.dt+'</div><div class="src">📰 '+t.sr+'</div></div>'});document.getElementById(id).innerHTML=h}
+
+var std=[{l:'طهران — مجمع خامنئي',c:'🇮🇷',t:'US-Israel',tg:'قيادة',d:'Feb 28',dt:'مقتل المرشد الأعلى'},{l:'طهران — مقر IRGC',c:'🇮🇷',t:'US-Israel',tg:'عسكري',d:'Feb 28',dt:'سُوّيت بالأرض'},{l:'طهران — وزارة الاستخبارات',c:'🇮🇷',t:'US-Israel',tg:'استخبارات',d:'Feb 28',dt:'مقتل بصيري'},{l:'أصفهان — منشأة نووية',c:'🇮🇷',t:'US-Israel',tg:'نووي',d:'Feb 28',dt:'منشأة رئيسية'},{l:'قم',c:'🇮🇷',t:'US-Israel',tg:'ديني/عسكري',d:'Feb 28',dt:'مدينة مقدسة'},{l:'تبريز',c:'🇮🇷',t:'US-Israel',tg:'عسكري',d:'Feb 28',dt:'شمال غرب'},{l:'كرمنشاه',c:'🇮🇷',t:'US-Israel',tg:'عسكري',d:'Feb 28',dt:'غرب'},{l:'بوشهر',c:'🇮🇷',t:'B-2',tg:'صاروخي/نووي',d:'Feb 28',dt:'قنابل خارقة'},{l:'شيراز',c:'🇮🇷',t:'US-Israel',tg:'عسكري',d:'Feb 28',dt:'جنوب'},{l:'ميناب — مدرسة بنات',c:'🇮🇷',t:'متنازع',tg:'مدني ❗',d:'Mar 1',dt:'١٦٥-١٨٠ طفلة'},{l:'ميناء إيراني — خليج عمان',c:'🇮🇷',t:'US Navy',tg:'بحري',d:'Mar 1',dt:'إغراق كورفيت جماران'},{l:'قاعدة أمريكية — الكويت',c:'🇰🇼',t:'رد إيراني',tg:'عسكري أمريكي',d:'Mar 1',dt:'٤ قتلى أمريكيين'},{l:'مقر الأسطول الخامس — البحرين',c:'🇧🇭',t:'رد إيراني',tg:'بحري أمريكي',d:'Mar 1',dt:'قاعدة الجفير'},{l:'العديد — قطر',c:'🇶🇦',t:'رد إيراني',tg:'قاعدة جوية أمريكية',d:'Mar 1',dt:'١٦ قطري جرحى'},{l:'مطار دبي الدولي',c:'🇦🇪',t:'رد إيراني',tg:'مطار',d:'Feb 28',dt:'٤ جرحى'},{l:'مطار زايد — أبوظبي',c:'🇦🇪',t:'رد إيراني',tg:'مطار',d:'Feb 28',dt:'١ قتيل ٧ جرحى'},{l:'بيت شيمش',c:'🇮🇱',t:'رد إيراني',tg:'مدني',d:'Mar 1',dt:'٦ قتلى ٢٠+ جريح'},{l:'رأس تنورة — أرامكو',c:'🇸🇦',t:'رد إيراني',tg:'نفطي',d:'Mar 1',dt:'حريق محتوى'},{l:'القاعدة البريطانية — قبرص',c:'🇨🇾',t:'مسيّرة إيرانية',tg:'عسكري بريطاني',d:'Mar 2',dt:'المدرج أُصيب'}];
+function rST(){var h='<table><thead><tr><th>الموقع</th><th>الدولة</th><th>النوع</th><th>الهدف</th><th>التاريخ</th><th>التفاصيل</th></tr></thead><tbody>';std.forEach(function(s){var tb=s.t.indexOf('Iran')>=0||s.t.indexOf('إيران')>=0||s.t.indexOf('رد')>=0||s.t.indexOf('مسيّرة')>=0?'br':'bb';h+='<tr><td style="font-weight:600">'+s.l+'</td><td>'+s.c+'</td><td><span class="b '+tb+'">'+s.t+'</span></td><td>'+s.tg+'</td><td class="mono" style="font-size:10px">'+s.d+'</td><td style="font-size:10px;color:var(--txt2)">'+s.dt+'</td></tr>'});h+='</tbody></table>';document.getElementById('sT').innerHTML=h}
+
+var csd=[{f:'\ud83c\uddee\ud83c\uddf7',n:'إيران',k:'555+',x:'١٣١ مقاطعة'},{f:'\ud83c\udfe3',n:'مدرسة ميناب',k:'180',x:'أطفال ابتدائية'},{f:'\ud83c\uddee\ud83c\uddf1',n:'إسرائيل',k:'11+',x:'تل أبيب + بيت شيمش'},{f:'\ud83c\uddfa\ud83c\uddf8',n:'أمريكا',k:'4',x:'عسكريون — الكويت'},{f:'\ud83c\udde6\ud83c\uddea',n:'الإمارات',k:'4',x:'عمال أجانب'},{f:'\ud83c\uddf1\ud83c\udde7',n:'لبنان',k:'31',x:'جنوب لبنان'},{f:'\ud83c\uddf5\ud83c\uddf0',n:'باكستان',k:'9',x:'احتجاجات كراتشي'},{f:'\ud83c\udde7\ud83c\udded',n:'البحرين',k:'1',x:'عامل ميناء سلمان'},{f:'\ud83c\uddee\ud83c\uddf6',n:'العراق',k:'2',x:'كتائب حزب الله'},{f:'\ud83c\udde8\ud83c\uddf3',n:'الصين',k:'1',x:'مواطن في طهران'}];
+function rCG(){var h='';csd.forEach(function(c){h+='<div class="cc"><div class="cf">'+c.f+'</div><div class="cn">'+c.n+'</div><div class="ck">'+c.k+'</div><div class="cx">'+c.x+'</div></div>'});document.getElementById('cG').innerHTML=h}
+
+var casd=[{d:'Mar 2',c:'🇮🇷 إيران',cat:'مدنيون إجمالي',k:'555',i:'غير معروف',r:'High'},{d:'Mar 1',c:'🇮🇷 إيران',cat:'مدرسة ميناب',k:'165-180',i:'—',r:'Medium'},{d:'Feb 28',c:'🇮🇷 إيران',cat:'خامنئي + ٤٠ مسؤول',k:'41+',i:'—',r:'High'},{d:'Mar 1',c:'🇺🇸 أمريكا',cat:'عسكريون — الكويت',k:'4',i:'5+ خطير',r:'High'},{d:'Mar 1',c:'🇮🇱 إسرائيل',cat:'مدنيون',k:'11+',i:'60+',r:'High'},{d:'Mar 1',c:'🇦🇪 الإمارات',cat:'مدنيون + عمال',k:'4',i:'60',r:'High'},{d:'Mar 2',c:'🇱🇧 لبنان',cat:'حزب الله + مدنيون',k:'31',i:'149',r:'High'},{d:'Mar 1',c:'🇵🇰 باكستان',cat:'متظاهرون — كراتشي',k:'9',i:'50+',r:'High'},{d:'Mar 1',c:'🇶🇦 قطر',cat:'مدنيون',k:'0',i:'16',r:'High'},{d:'Mar 1',c:'🇧🇭 البحرين',cat:'عامل ميناء',k:'1',i:'2',r:'Medium'},{d:'Mar 1',c:'🇮🇶 العراق',cat:'كتائب حزب الله',k:'2',i:'5',r:'Medium'}];
+function rCT(){var h='<table><thead><tr><th>التاريخ</th><th>الدولة</th><th>الفئة</th><th>القتلى</th><th>الجرحى</th><th>الموثوقية</th></tr></thead><tbody>';casd.forEach(function(c){var rb=c.r==='High'?'bg':c.r==='Medium'?'by':'br';h+='<tr><td class="mono" style="font-size:10px">'+c.d+'</td><td style="font-weight:600">'+c.c+'</td><td>'+c.cat+'</td><td class="mono" style="color:var(--red);font-weight:700">'+c.k+'</td><td class="mono" style="color:var(--orange)">'+c.i+'</td><td><span class="b '+rb+'">'+c.r+'</span></td></tr>'});h+='</tbody></table>';document.getElementById('cT').innerHTML=h}
+
+function extractText(d){var t='';if(d&&d.content){for(var i=0;i<d.content.length;i++){if(d.content[i].type==='text'&&d.content[i].text){t+=d.content[i].text+'\n'}}}return t.trim()}
+function aiQ(q){var ld=document.getElementById('aiL'),rs=document.getElementById('aiR');ld.className='al v';rs.className='ar';document.querySelectorAll('.ab').forEach(function(b){b.disabled=true});fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,tools:[{type:'web_search_20250305',name:'web_search'}],messages:[{role:'user',content:'ابحث عن: '+q+'\nأعطني ملخص عربي لآخر 5 تطورات عسكرية. مختصر. إيموجي. من الأحدث. أذكر المصادر.'}]})}).then(function(r){return r.json()}).then(function(d){var t=extractText(d);rs.textContent=t||'لا نتائج';rs.className='ar v'}).catch(function(e){rs.textContent='خطأ: '+e.message;rs.className='ar v'}).finally(function(){ld.className='al';document.querySelectorAll('.ab').forEach(function(b){b.disabled=false})})}
+
+
+var mapData=[
+{t:'طهران — مجمع خامنئي + مقر IRGC + وزارة الاستخبارات',d:'Feb 28',dt:'مقتل المرشد الأعلى + ٤٠ مسؤول — ضربات B-2 أمريكية + إسرائيلية',a:'US-Israel',c:'#ff3355'},
+{t:'أصفهان — منشأة نووية رئيسية',d:'Feb 28',dt:'ضربة على البنية التحتية النووية الإيرانية',a:'US-Israel',c:'#ff3355'},
+{t:'قم — مركز ديني/عسكري',d:'Feb 28',dt:'ضربات على مواقع عسكرية',a:'US-Israel',c:'#ff3355'},
+{t:'تبريز — شمال غرب إيران',d:'Feb 28',dt:'قواعد عسكرية',a:'US-Israel',c:'#ff3355'},
+{t:'كرمنشاه — غرب إيران',d:'Feb 28',dt:'قواعد صاروخية',a:'US-Israel',c:'#ff3355'},
+{t:'بوشهر — منشأة صاروخية/نووية',d:'Feb 28',dt:'B-2 بقنابل خارقة للتحصينات',a:'B-2 Bomber',c:'#ff3355'},
+{t:'شيراز — قاعدة جوية',d:'Feb 28',dt:'جنوب إيران',a:'US-Israel',c:'#ff3355'},
+{t:'🏫 مدرسة ميناب — ١٦٥-١٨٠ طفلة',d:'Mar 1',dt:'مدرسة شجرة طيبة الابتدائية — إيران تتهم إسرائيل — أكبر مأساة إنسانية',a:'متنازع عليه',c:'#ffaa22'},
+{t:'🇺🇸 قاعدة أمريكية — الكويت',d:'Mar 1',dt:'مقتل ٤ جنود أمريكيين — أول خسائر أمريكية في العملية',a:'رد إيراني',c:'#ff6633'},
+{t:'🇧🇭 مقر الأسطول الخامس — البحرين',d:'Mar 1',dt:'قاعدة الجفير — ١ قتيل ٢ جريح',a:'رد إيراني',c:'#ff6633'},
+{t:'🇶🇦 قاعدة العديد — قطر',d:'Mar 1',dt:'٦٥ صاروخ — ١٦ قطري جرحى',a:'رد إيراني',c:'#ff6633'},
+{t:'✈️ مطار دبي الدولي DXB',d:'Feb 28',dt:'صواريخ باليستية — ٤ جرحى — المطار معلّق',a:'رد إيراني',c:'#ff6633'},
+{t:'مطار زايد — أبوظبي AUH',d:'Feb 28',dt:'مسيّرة إيرانية — ١ قتيل ٧ جرحى',a:'رد إيراني',c:'#ff6633'},
+{t:'🇮🇱 بيت شيمش — إسرائيل',d:'Mar 1',dt:'صاروخ باليستي على مباني سكنية — ٦ قتلى ٢٠+ جريح — ١٩ ميل من القدس',a:'رد إيراني',c:'#ff6633'},
+{t:'🛢️ رأس تنورة — أرامكو السعودية',d:'Mar 1',dt:'استهداف منشأة نفطية — حريق محتوى',a:'رد إيراني',c:'#ff6633'},
+{t:'🇨🇾 قاعدة بريطانية — قبرص',d:'Mar 2',dt:'مسيّرة إيرانية — المدرج أُصيب',a:'رد إيراني',c:'#ff6633'},
+{t:'🇱🇧 جنوب لبنان — حزب الله',d:'Mar 2',dt:'تبادل ضربات مع إسرائيل — ٣١ قتيل ١٤٩ جريح',a:'حزب الله ↔ إسرائيل',c:'#aa44ff'},
+{t:'بغداد — كتائب حزب الله العراق',d:'Mar 1',dt:'٢ قتلى ٥ جرحى',a:'رد إيراني/ميليشيات',c:'#ff6633'}
+];
+function showInfo(i){var d=mapData[i];var el=document.getElementById('mapInfo');el.innerHTML='<h4 style="color:'+d.c+'">'+d.t+'</h4><div style="display:flex;gap:12px;margin:6px 0"><span class="mono" style="color:var(--cyan);font-size:10px">'+d.d+'</span><span class="b" style="background:'+d.c+'22;color:'+d.c+'">'+d.a+'</span></div><div>'+d.dt+'</div>';el.className='map-info v'}
+
+rTL('t1',tld);rST();rCG();rCT();
+</script>
+</body>
+</html>
